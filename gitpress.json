@@ -11,7 +11,7 @@
 		"算法": "posts/算法",
 		"其他": "posts"
 	},
-	"domain_alias" :  [], 
+	"domain_alias" :  ["blog.holdjs.com"], 
 	"template"    : "default",
 	"perpage"   : 10,
 	"template"  : "pithiness",
