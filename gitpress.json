@@ -1,28 +1,24 @@
 {
-    "docs"      : ["posts"],
-    "template"    : "default",
-    "domain_alias" :  ["your.domain"],    
-    "perpage"   : 10,
-    "order"  : "number",
-    "types"     : {
-        "\\.(md||markdown)$"   : "markdown", 
-        "\\.(js||css||json)$"  : "code",
-        "\\.html?$"            : "html",
-        ".*"                   : "text"        
-    },
-    "title"  : "Akira's Blog",
-    "description" : "My Blog Description...",
-    "comment"  : {"type":"disqus", "short_name":"gitpress"},
-    "friends"  : [
-        {
-          "name"  : "github",
-          "title"  : "github",
-          "url"  : "http://github.com"          
-        },
-        {
-          "name"  : "gitpress",
-          "title"  : "gitpress",
-          "url"  : "http://gitpress.org"
-        }
-    ] 
+	"docs"      : {
+		"关于我的博客": "README.md",
+		"gitpress": "posts/gitpress",
+		"PHP": "posts/PHP",
+		"Python": "posts/python",
+		"JavaScript": "posts/JavaScript",
+		"cocos2dx": "posts/cocos2dx",
+		"css":"posts/css",
+		"算法": "posts/算法",
+		"其他": "posts"
+	},	
+	"perpage"   : 10,
+	"template"  : "pithiness",
+	"types"     : {
+		"\\.(md||markdown)$"   : "markdown", 
+		"\\.(js||css||json)$"  : "code",
+		"\\.html?$"            : "html",
+		".*"                   : "text"		
+	},
+	"title"  : "Laonon's Blog",
+	"comment"  : {"type": "duoshuo", "short_name":"akira-cn"},
+	"domain-alias"  : ["holdjs.com"]
 }
