@@ -9,7 +9,8 @@
 		"css":"posts/css",
 		"算法": "posts/算法",
 		"其他": "posts"
-	},	
+	},
+	"template"    : "default",
 	"perpage"   : 10,
 	"template"  : "pithiness",
 	"types"     : {
@@ -19,6 +20,5 @@
 		".*"                   : "text"		
 	},
 	"title"  : "Laonon's Blog",
-	"comment"  : {"type": "duoshuo", "short_name":"akira-cn"},
-	"domain-alias"  : ["holdjs.com"]
+	"comment"  : {"type":"disqus", "short_name":"gitpress"}
 }
