@@ -1,7 +1,8 @@
 ##获取touchmove过程中手指所在的DOM元素  
 最近以three开始的着一系列游戏火爆了，我想来自己也山寨一个不同玩法的试试，不试不知道，一试吓一跳，发现了一个之前不知道的问题。  
 具体问题是这样：在鼠标或者手指移动过程中，获取鼠标或者手指所在的DOM元素，如下图所示：  
-<!--more-->
+<!--more-->  
+
 <img src="http://holdjs.sinaapp.com/wp-content/themes/v6/images/4.png" width="" height="">  
 
 可是在实现过程中，发现一个问题，当用鼠标事件处理时，mouseover过程中，能通过event.target很方面的获取到当前鼠标滑过的DOM，但是采用touch事件时，当touchstart获取到event.target后，只要touch没有结束，touchmove过程中获得的DOM对象永远是touchstart时获取到的DOM。后来查资料重新认识了下touchstart/touchmove/touchend：  
