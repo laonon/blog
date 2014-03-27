@@ -4,11 +4,10 @@
 		"html":"posts/html",
 		"css":"posts/css",
 		"JavaScript": "posts/JavaScript",
-		"PHP": "posts/PHP",
-		"Python": "posts/python",
-		"Nodejs":"posts/Nodejs",
-		"cocos2dx": "posts/cocos2dx",
-		"其他": "posts"
+		"Server": "posts/Server",
+		"demo": "posts/demo",
+		"关于我": "posts/about",
+		"其它":"posts/other"
 	},
 	"domain_alias" :  ["blog.holdjs.com"], 
 	"template"    :  "greyshade", // default、slate、tactile、phase、pithiness、greyshade
