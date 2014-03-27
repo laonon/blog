@@ -21,6 +21,6 @@
 		"\\.html?$"            : "html",
 		".*"                   : "text"		
 	},
-	"title"  : "Laonon's Blog",
-	"comment"  : {"type":"disqus", "short_name":"gitpress"}
+	"title"  : "爱吃鱼的喵~",
+	"comment"  : {"type":"duoshuo", "short_name":"laonon"}
 }
