@@ -14,7 +14,6 @@
 	"domain_alias" :  ["blog.holdjs.com"], 
 	"template"    :  "greyshade", // default、slate、tactile、phase、pithiness、greyshade
 	"perpage"   : 10,
-	"template"  : "pithiness",
 	"types"     : {
 		"\\.(md||markdown)$"   : "markdown", 
 		"\\.(js||css||json)$"  : "code",
