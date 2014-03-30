@@ -5,6 +5,7 @@
 <pre>
 console.log(this);//[object Window]即window
 </pre>
+<!--more-->
 #####2.普通函数调用，this指向window
 <pre>
 function test(){
