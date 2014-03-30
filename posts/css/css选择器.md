@@ -165,7 +165,7 @@ css选择器的文章已经多如牛毛，css3也新增了很多有意思的选�
 .box::after:hover{background-color: #999;}
 //html
 &lt;div class="box"&gt; &lt;/div&gt;
-</pre>  
+</pre>
 上面的代码可以在浏览器里看到如下效果：  
 <img src="http://wareroom.sinaapp.com/images/2014033003.png" width="300" >   
 鼠标滑过  
