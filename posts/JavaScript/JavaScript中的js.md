@@ -63,7 +63,7 @@ var Class = {};
 Class.test = function(){
     var self = this;
     function inner(){
-        console.log(self);//输出 Object{test: function}
+        console.log(self);//输出Class
     }
     inner();
 }
