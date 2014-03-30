@@ -162,8 +162,7 @@ css选择器的文章已经多如牛毛，css3也新增了很多有意思的选�
 .box:hover{background-color: #f00;}
 .box:hover::before{content: ' ';width: 100px;height: 100px;background-color: #ccc;position: absolute;top:0;left: 10px;}
 .box::after{content: ' ';width: 100px;height: 100px;background-color: #ff0;position: absolute;bottom: 0;left: 10px;}
-.box::after:hover{background-color: #999;}  
-
+.box::after:hover{background-color: #999;} 
 //html
 &lt;div class="box"&gt; &lt;/div&gt;
 </pre>  
