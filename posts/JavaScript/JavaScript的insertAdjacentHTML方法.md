@@ -1,5 +1,6 @@
 ##JavaScript的insertAdjacentHTML方法  
 今天看别人的代码发现一个insertAdjacentHTML方法，对其不了解，于是google了一下，发现它的作用类似之前常用的innerHTML和innerText，但是插入的对象不同，innerHTML和innerText是在节点内部插入，而insertAdjacentHTML则是根据参数的不同选择插入位置，具体用法如下：  
+<!--more-->
 
 ####该方法的解释：  
 insertAdjacentHTML()解析指定的文本，HTML或XML，并插入到DOM树中的节点在指定的位置。它不会重新解析正在使用的元素，因此它不会破坏现有的元素里面的元素。这方面的工作，并避免额外的步骤系列化，让它变得更快，不直接innerHTML操作.  
