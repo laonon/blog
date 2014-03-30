@@ -22,8 +22,10 @@ html表示要插入的内容，是字符串被解析成 HTML 或 XML 插入到 D
 
 ####示例：  
 首先在不执行该方法时dom结构如下   
-<pre><code>//html
-<div id="obj">hello world</div></code></pre>  
+<pre>
+//html
+&lt;div id="obj"&gt;hello world&lt;/div&gt;
+</pre>  
 如下图，可以清楚的看到DOM结构：  
 <img src="http://holdjs.sinaapp.com/wp-content/themes/v6/images/2.png" width="480px" >
 接下来执行insertAdjacentHTML方法  
