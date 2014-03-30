@@ -4,7 +4,7 @@
 ####1.在全局范围使用this，会指向window  
 <pre>
 console.log(this);//[object Window]即window
-</pre>
+</pre>  
 <!--more-->
 #####2.普通函数调用，this指向window
 <pre>
