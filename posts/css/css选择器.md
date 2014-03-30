@@ -162,13 +162,13 @@ css选择器的文章已经多如牛毛，css3也新增了很多有意思的选�
 .box:hover{background-color: #f00;}
 .box:hover::before{content: ' ';width: 100px;height: 100px;background-color: #ccc;position: absolute;top:0;left: 10px;}
 .box::after{content: ' ';width: 100px;height: 100px;background-color: #ff0;position: absolute;bottom: 0;left: 10px;}
-.box::after:hover{background-color: #999;}
+.box::after:hover{background-color: #999;}  
 
 //html
 &lt;div class="box"&gt; &lt;/div&gt;
 </pre>  
 上面的代码可以在浏览器里看到如下效果：  
-<img src="http://wareroom.sinaapp.com/images/2014033003.png" width="300" >  
+<img src="http://wareroom.sinaapp.com/images/2014033003.png" width="300" >   
 鼠标滑过  
 <img src="http://wareroom.sinaapp.com/images/2014033004.png" width="300" >   
 有此可见，伪类的伪元素生效，而伪元素的伪类没生效，那么这个结论是都能推广到所有的伪类和伪元素呢？  
