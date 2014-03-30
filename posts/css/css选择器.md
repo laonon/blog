@@ -1,0 +1,175 @@
+##CSS选择器中伪类与伪元素 
+css选择器的文章已经多如牛毛，css3也新增了很多有意思的选择器，有效利用能帮我们省下不少代码，但是今天咱不是谈这个。话题始于前段时间一同事问我，一个元素的after伪元素的hover伪类会生效吗？  
+我心里想的是应该是可以吧，after是伪元素，hover是伪类，::after:hover不过就是相当于给一个元素添加了个类吗？但是为了保险起见，我还是回答我测试下吧，于是有了下面的测试。  
+在此之前，我们首先应搞清楚两个概念：伪类和伪元素。相信很多初学者还比较模糊，甚至没去考虑过它们的区别，因为不清楚并不影响使用。  
+<!--more-->
+简单来说，两者最大的区别是是否创建了新元素,伪类相当于在原有的元素加了一个类，而伪元素则相当于新增了一个标签。举个例子，就以after和hover为例吧。假设一个原有DOM如下：
+<pre>
+//css  
+.box{position:relative;width:200px;height:200px;border: 1px solid #ccc;color:#333;}
+.box:hover{background:#f00;}
+.box::after{content:' ';position:absolute;width:100px;height；100px;background-color:#ff0;bottom:0;}  
+
+//html  
+&lt;div class="box"&gt;test&lt;/div&gt;
+</pre>
+效果图：  
+<img src="http://wareroom.sinaapp.com/images/2014033001.png" width="300px">  
+鼠标滑过  
+<img src="http://wareroom.sinaapp.com/images/2014033002.png" width="300px">
+由上面的代码，我们在浏览器里可以看到，hover只在鼠标滑过的时候生效而且和原本的状态是相斥的，但是after则会一直存在，，也就是说伪类实际上想等于在原有的元素添加类名，如果伪类的设置的属性值在原元素中已经设置过，则会覆盖原有的属性值，但是伪类则不一样，相当于是新增一个标签，与原元素同时存在。下面附上伪类和伪元素的分类表：  
+<table>
+	<thead>
+		<tr>
+			<td>选择符</td>
+			<td>类别</td>
+			<td>作用</td>
+		</tr> 
+	</thead>
+	<tbody>
+		<tr>
+			<td>E:link</td>
+			<td>伪类</td>
+			<td>超链接默认状态（未被访问前）</td>
+		</tr>
+		<tr>
+			<td>E:hover</td>
+			<td>伪类</td>
+			<td>鼠标滑过状态</td>
+		</tr>
+		<tr>
+			<td>E:active</td>
+			<td>伪类</td>
+			<td>元素激活状态</td>
+		</tr>
+		<tr>
+			<td>E:visited</td>
+			<td>伪类</td>
+			<td>超链接访问后的状态</td>
+		</tr>
+		<tr>
+			<td>E:focus</td>
+			<td>伪类</td>
+			<td>元素聚焦的状态</td>
+		</tr>
+		<tr>
+			<td>E:lang()</td>
+			<td>伪类</td>
+			<td>语言匹配</td>
+		</tr>
+		<tr>
+			<td>E:not()</td>
+			<td>伪类</td>
+			<td>不含特定选择符的匹配</td>
+		</tr>
+		<tr>
+			<td>E:root</td>
+			<td>伪类</td>
+			<td>匹配E在文档中的根元素</td>
+		</tr>
+		<tr>
+			<td>E:first-child</td>
+			<td>伪类</td>
+			<td>匹配元素的第一个子元素</td>
+		</tr>
+		<tr>
+			<td>E:last-child</td>
+			<td>伪类</td>
+			<td>匹配元素的最后一个子元素</td>
+		</tr>
+		<tr>
+			<td>E:only-child</td>
+			<td>伪类</td>
+			<td>匹配只有一个子元素的元素E</td>
+		</tr>
+		<tr>
+			<td>E:nth-child(n)</td>
+			<td>伪类</td>
+			<td>匹配元素的第n个元素（n可以不设置确定值）</td>
+		</tr>
+		<tr>
+			<td>E:nth-last-child(n)</td>
+			<td>伪类</td>
+			<td>匹配元素的倒数第n个子元素</td>
+		</tr>
+		<tr>
+			<td>E:first-of-type</td>
+			<td>伪类</td>
+			<td>匹配第一个同类型的元素</td>
+		</tr>
+		<tr>
+			<td>E:last-of-type</td>
+			<td>伪类</td>
+			<td>匹配最后一个同类型的元素</td>
+		</tr>
+		<tr>
+			<td>E:empty</td>
+			<td>伪类</td>
+			<td>匹配不含子元素的元素</td>
+		</tr>
+		<tr>
+			<td>E:checked</td>
+			<td>伪类</td>
+			<td>匹配被选择的元素（表单）</td>
+		</tr>
+		<tr>
+			<td>E:enabled</td>
+			<td>伪类</td>
+			<td>匹配可用的元素</td>
+		</tr>
+		<tr>
+			<td>E:disabled</td>
+			<td>伪类</td>
+			<td>匹配被禁用的元素</td>
+		</tr>
+		<tr>
+			<td>E:target</td>
+			<td>伪类</td>
+			<td>匹配url指向的元素（锚点）</td>
+		</tr>
+		<tr>
+			<td>E::first-line</td>
+			<td>伪元素</td>
+			<td>匹配元素第一行</td>
+		</tr>
+		<tr>
+			<td>E::first-letter</td>
+			<td>伪元素</td>
+			<td>匹配元素第一个字符</td>
+		</tr>
+		<tr>
+			<td>E::before</td>
+			<td>伪元素</td>
+			<td>设置元素前的DOM</td>
+		</tr>
+		<tr>
+			<td>E::after</td>
+			<td>伪元素</td>
+			<td>设置元素后的DOM</td>
+		</tr>
+		<tr>
+			<td>E::selection</td>
+			<td>伪元素</td>
+			<td>设置元素被选择时</td>
+		</tr>
+	</tbody>
+</table>
+如果你还是不清楚可以参考[CSS伪类与CSS伪元素的区别及由来](http://swordair.com/origin-and-difference-between-css-pseudo-classes-and-pseudo-elements/)。  
+好了，理清楚了这两者的基本概念，再来看两者嵌套使用的情况。  
+<pre>
+//css
+.box{width:200px;height: 200px;border: 1px solid #ccc;position: relative;}
+.box:hover{background-color: #f00;}
+.box:hover::before{content: ' ';width: 100px;height: 100px;background-color: #ccc;position: absolute;top:0;left: 10px;}
+.box::after{content: ' ';width: 100px;height: 100px;background-color: #ff0;position: absolute;bottom: 0;left: 10px;}
+.box::after:hover{background-color: #999;}
+
+//html
+&lt;div class="box"&gt; &lt;/div&gt;
+</pre>  
+上面的代码可以在浏览器里看到如下效果：
+<img src="http://wareroom.sinaapp.com/images/2014033003.png" width="300" >  
+鼠标滑过  
+<img src="http://wareroom.sinaapp.com/images/2014033004.png" width="300" >   
+有此可见，伪类的伪元素生效，而伪元素的伪类没生效，那么这个结论是都能推广到所有的伪类和伪元素呢？  
+####未完待续……
