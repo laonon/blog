@@ -32,7 +32,16 @@ var me = mm.test;
 me();//console.log(window) 
 </pre>  
 其实不难理解，在当mm.test赋值给me,对于me()的执行，就相当于普通函数的执行，因而指向window.  
-####5.call和apply中的this  
+####5.对象方法中的this
+<pre>
+var Obj = {
+	output: function(){
+		console.log(this);//Obj
+	}
+};
+</pre>
+显然这里的this与第三种情况一样，this指向了调用方法的对象
+####6.call和apply中的this  
 <pre>
 function foo(a, b, c) {
     console.log(this);
