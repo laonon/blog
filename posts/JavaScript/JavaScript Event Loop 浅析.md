@@ -4,7 +4,7 @@
 
 然后微博被纷纷转载，其中看到[@貘吃馍香](http://weibo.com/itapir)的说了句：了解 event loop 后这些全无压力。尽管搞清楚了event loop还不一定搞得清楚吴多益那道题，但是学习js搞清楚 event loop是必须的。于是乎，我google相关资料，发现一篇文章写得比较易懂[《JavaScript Event Loop 浅析》](http://heroicyang.com/2012/08/28/javascript-event-loop/),另外还有一篇参考文章[How JavaScript Timers Work](http://ejohn.org/blog/how-javascript-timers-work/)  
 ###原文是这样
-######问题场景
+####问题场景
 先看一段代码，看看执行结果与预期目标是否一致：  
 <pre>
 //html
@@ -53,7 +53,7 @@ function sleep(ms) {
 
 于是结果就只看到了”done”。  
 
-######怎样解决？
+####怎样解决？
 
 使用setTimeout()，下面是修改后的onclick事件处理函数：
 <pre>
