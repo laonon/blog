@@ -10,7 +10,8 @@
 <pre>
 //html
 &lt;a href="#" id="doBtn"&gt;do something&lt;/a&gt;
-&lt;div id="status"&gt;&lt;/div&gt;  
+&lt;div id="status"&gt;&lt;/div&gt;
+
 //javascript
 void function() {
   var doBtn = document.getElementById('doBtn')
@@ -65,7 +66,8 @@ doBtn.onclick = function(e) {
 </pre>  
 为什么这样就解决了呢？还是用上面的队列的图来解释。  
 <img src="http://img.heroicyang.com/js-event-loop-2.png" width="500px">   
-看完是不是豁然开朗，但是还是有几个疑问：  
+
+
 
 
 
