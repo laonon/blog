@@ -1,7 +1,7 @@
 ##JavaScript Event Loop 浅析
 今天微博上出现[@吴多益](http://weibo.com/nwind)的一个帖子，原帖是这样的:  
 >话说这些年来我最喜欢问的面试题是『从输入 URL 到页面加载完的过程中都发生了什么事情？』，个人觉得这道题非常非常难，既考深度又考广度，至今还没有人的回答让我满意，所以我想自己挑战一下，整理出一篇文章，有哪位大牛也想来一起挑战么？  
-
+<!--more-->
 然后微博被纷纷转载，其中看到[@貘吃馍香](http://weibo.com/itapir)的说了句：了解 event loop 后这些全无压力。尽管搞清楚了event loop还不一定搞得清楚吴多益那道题，但是学习js搞清楚 event loop是必须的。于是乎，我google相关资料，发现一篇文章写得比较易懂[《JavaScript Event Loop 浅析》](http://heroicyang.com/2012/08/28/javascript-event-loop/),另外还有一篇参考文章[How JavaScript Timers Work](http://ejohn.org/blog/how-javascript-timers-work/)  
 ###原文是这样
 ####问题场景
