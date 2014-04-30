@@ -2,6 +2,7 @@
 今天微博上出现[@吴多益](http://weibo.com/nwind)的一个帖子，原帖是这样的:  
 >话说这些年来我最喜欢问的面试题是『从输入 URL 到页面加载完的过程中都发生了什么事情？』，个人觉得这道题非常非常难，既考深度又考广度，至今还没有人的回答让我满意，所以我想自己挑战一下，整理出一篇文章，有哪位大牛也想来一起挑战么？  
 <!--more-->
+
 然后微博被纷纷转载，其中看到[@貘吃馍香](http://weibo.com/itapir)的说了句：了解 event loop 后这些全无压力。尽管搞清楚了event loop还不一定搞得清楚吴多益那道题，但是学习js搞清楚 event loop是必须的。于是乎，我google相关资料，发现一篇文章写得比较易懂[《JavaScript Event Loop 浅析》](http://heroicyang.com/2012/08/28/javascript-event-loop/),另外还有一篇参考文章[How JavaScript Timers Work](http://ejohn.org/blog/how-javascript-timers-work/)  
 ###原文是这样
 ####问题场景
@@ -41,13 +42,13 @@ function sleep(ms) {
 
 而 GUI 渲染线程和 JavaScript 引擎线程是互斥的，JavaScript 执行时 GUI 渲染线程是挂起的，页面将停止一切的解析和渲染行为。上面的 3、4、5 类线程也会产生不同的异步事件。看下面这张图就应该比较直观了。
   
-<img src="http://img.heroicyang.com/js-event-loop.png" width="100%">
+<img src="http://img.heroicyang.com/js-event-loop.png" width="500px">
 
 因为 JavaScript 引擎是单线程的，所以代码都是先压到队列，然后由引擎采用先进先出的方式运行。事件处理函数、timer 执行函数也会排到这个队列中，然后利用一个无穷回圈，不断从队头取出函数执行，这个就是Event Loop。  
 
 接下来还是继续用图来说明上面的代码为什么没有达到预期效果。
 
-<img src="http://img.heroicyang.com/js-event-loop-1.png" width="100%">  
+<img src="http://img.heroicyang.com/js-event-loop-1.png" width="500px">  
 
 于是结果就只看到了”done”。  
 
@@ -67,7 +68,7 @@ doBtn.onclick = function(e) {
 };
 </pre>  
 为什么这样就解决了呢？还是用上面的队列的图来解释。
-<img src="http://img.heroicyang.com/js-event-loop-2.png" width="100%">  
+<img src="http://img.heroicyang.com/js-event-loop-2.png" width="500px">  
 
 看完是不是豁然开朗，但是还是有几个疑问：  
 
