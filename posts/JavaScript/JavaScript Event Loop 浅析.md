@@ -10,8 +10,7 @@
 <pre>
 //html
 &lt;a href="#" id="doBtn"&gt;do something&lt;/a&gt;
-&lt;div id="status"&gt;&lt;/div&gt;
-
+&lt;div id="status"&gt;&lt;/div&gt;  
 //javascript
 void function() {
   var doBtn = document.getElementById('doBtn')
@@ -22,8 +21,7 @@ void function() {
     sleep(10000);  // 模拟一个耗时较长的计算过程，10s
     status.innerText = 'done';  // 完成啦
   };
-}();
-
+}();  
 function sleep(ms) {
   var start = new Date();
   while (new Date() - start <= ms) {}
@@ -57,10 +55,8 @@ function sleep(ms) {
 使用setTimeout()，下面是修改后的onclick事件处理函数：
 <pre>
 doBtn.onclick = function(e) {
-  e.preventDefault();
-
-  status.innerText = 'doing...please wait...';  // 开始啦
-  
+  e.preventDefault();  
+  status.innerText = 'doing...please wait...';  // 开始啦  
   setTimeout(function() {
     sleep(10000);  // 模拟一个耗时较长的计算过程，10s
     status.innerText = 'done';  // 完成啦
