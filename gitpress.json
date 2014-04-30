@@ -10,7 +10,7 @@
 		"其它":"posts/other"
 	},
 	"domain_alias" :  ["blog.holdjs.com"], 
-	"template"    :  "phase", // default、slate、tactile、phase、pithiness、greyshade
+	"template"    :  "slate", // default、slate、tactile、phase、pithiness、greyshade
 	"perpage"   : 10,
 	"types"     : {
 		"\\.(md||markdown)$"   : "markdown", 
