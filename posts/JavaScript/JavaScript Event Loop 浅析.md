@@ -15,10 +15,8 @@
 void function() {
   var doBtn = document.getElementById('doBtn')
     , status = document.getElementById('status');
-
   doBtn.onclick = function(e) {
     e.preventDefault();
-
     status.innerText = 'doing...please wait...';  // 开始啦
     sleep(10000);  // 模拟一个耗时较长的计算过程，10s
     status.innerText = 'done';  // 完成啦
