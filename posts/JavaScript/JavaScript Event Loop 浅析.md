@@ -63,9 +63,8 @@ doBtn.onclick = function(e) {
   }, 0);  // 0ms delay
 };
 </pre>  
-为什么这样就解决了呢？还是用上面的队列的图来解释。
-<img src="http://img.heroicyang.com/js-event-loop-2.png" width="500px">  
-
+为什么这样就解决了呢？还是用上面的队列的图来解释。  
+<img src="http://img.heroicyang.com/js-event-loop-2.png" width="500px">   
 看完是不是豁然开朗，但是还是有几个疑问：  
 
 
